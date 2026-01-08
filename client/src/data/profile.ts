@@ -185,7 +185,7 @@ export const certifications: Certification[] = [
     date: "May 2025",
     credentialId: "8JDM3PIQFRPG",
     url: "https://coursera.org/verify/professional-cert/8JDM3PIQFRPG",
-    image: "/attached_assets/image_1767878427676.png"
+    image: "/Certificates_Images/ibm_ml_professional.png"
   },
   {
     id: "ibm-dl",
@@ -195,7 +195,7 @@ export const certifications: Certification[] = [
     date: "Jan 2026",
     credentialId: "NX1EGW2N4SAJ",
     url: "https://coursera.org/verify/professional-cert/NX1EGW2N4SAJ",
-    image: "/attached_assets/image_1767878253928.png"
+    image: "/Certificates_Images/ibm_dl_pytorch_keras_tf.png"
   },
   {
     id: "ibm-keras-tf",
@@ -205,7 +205,7 @@ export const certifications: Certification[] = [
     date: "Dec 2025",
     credentialId: "ADSKL2MFJ2TR",
     url: "https://coursera.org/verify/ADSKL2MFJ2TR",
-    image: "/attached_assets/image_1767878320845.png"
+    image: "/Certificates_Images/deep_learning_keras_tf.png"
   },
   {
     id: "ibm-pytorch",
@@ -215,7 +215,7 @@ export const certifications: Certification[] = [
     date: "Dec 2025",
     credentialId: "VV8F1M8DMGQ8",
     url: "https://coursera.org/verify/VV8F1M8DMGQ8",
-    image: "/attached_assets/image_1767878382188.png"
+    image: "/Certificates_Images/neural_networks_pytorch.png"
   },
   {
     id: "ibm-r-intro",
@@ -225,7 +225,7 @@ export const certifications: Certification[] = [
     date: "Dec 2025",
     credentialId: "D7LX351DYG7H",
     url: "https://coursera.org/verify/D7LX351DYG7H",
-    image: "/attached_assets/image_1767878630053.png"
+    image: "/Certificates_Images/intro_r_data_science.png"
   },
   {
     id: "ibm-sql-r",
@@ -235,7 +235,7 @@ export const certifications: Certification[] = [
     date: "Dec 2025",
     credentialId: "T5TMLQX4M1N3",
     url: "https://coursera.org/verify/T5TMLQX4M1N3",
-    image: "/attached_assets/image_1767878686313.png"
+    image: "/Certificates_Images/sql_data_science_r.png"
   },
   {
     id: "upenn-crypto",
@@ -245,7 +245,7 @@ export const certifications: Certification[] = [
     date: "Dec 2025",
     credentialId: "LS18ZTFQE3CP",
     url: "https://coursera.org/verify/LS18ZTFQE3CP",
-    image: "/attached_assets/image_1767878820049.png"
+    image: "/Certificates_Images/crypto_blockchain_wharton.png"
   },
   {
     id: "udemy-r",
@@ -255,7 +255,7 @@ export const certifications: Certification[] = [
     date: "Apr 2025",
     credentialId: "UC-406545ad-0cd6-4d16-9cf2-4d3dec4c58ab",
     url: "https://ude.my/UC-406545ad-0cd6-4d16-9cf2-4d3dec4c58ab",
-    image: "/attached_assets/image_1767878486263.png"
+    image: "/Certificates_Images/r_programming_udemy.png"
   }
 ];
 
