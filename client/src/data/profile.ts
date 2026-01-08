@@ -173,56 +173,89 @@ export interface Certification {
   date: string;
   credentialId?: string;
   url?: string;
+  image?: string;
 }
 
 export const certifications: Certification[] = [
   {
     id: "ibm-ml",
-    title: "IBM Machine Learning Specialization",
-    issuer: "IBM",
+    title: "IBM Machine Learning Professional Certificate",
+    issuer: "IBM via Coursera",
     issuerLogo: "IBM",
-    date: "2024",
-    credentialId: "IBM-ML-2024-XXX"
+    date: "May 2025",
+    credentialId: "8JDM3PIQFRPG",
+    url: "https://coursera.org/verify/professional-cert/8JDM3PIQFRPG",
+    image: "/attached_assets/image_1767878427676.png"
   },
   {
     id: "ibm-dl",
-    title: "IBM Deep Learning with PyTorch, Keras & TensorFlow Specialization",
-    issuer: "IBM",
+    title: "IBM Deep Learning with PyTorch, Keras & TensorFlow",
+    issuer: "IBM via Coursera",
     issuerLogo: "IBM",
-    date: "2024",
-    credentialId: "IBM-DL-2024-XXX"
+    date: "Jan 2026",
+    credentialId: "NX1EGW2N4SAJ",
+    url: "https://coursera.org/verify/professional-cert/NX1EGW2N4SAJ",
+    image: "/attached_assets/image_1767878253928.png"
   },
   {
     id: "ibm-keras-tf",
-    title: "Deep Learning with Keras & TensorFlow",
-    issuer: "IBM",
+    title: "Deep Learning with Keras and TensorFlow",
+    issuer: "IBM via Coursera",
     issuerLogo: "IBM",
-    date: "2023",
-    credentialId: "IBM-KT-2023-XXX"
+    date: "Dec 2025",
+    credentialId: "ADSKL2MFJ2TR",
+    url: "https://coursera.org/verify/ADSKL2MFJ2TR",
+    image: "/attached_assets/image_1767878320845.png"
   },
   {
     id: "ibm-pytorch",
     title: "Introduction to Neural Networks and PyTorch",
-    issuer: "IBM",
+    issuer: "IBM via Coursera",
     issuerLogo: "IBM",
-    date: "2023",
-    credentialId: "IBM-PT-2023-XXX"
+    date: "Dec 2025",
+    credentialId: "VV8F1M8DMGQ8",
+    url: "https://coursera.org/verify/VV8F1M8DMGQ8",
+    image: "/attached_assets/image_1767878382188.png"
+  },
+  {
+    id: "ibm-r-intro",
+    title: "Introduction to R Programming for Data Science",
+    issuer: "IBM via Coursera",
+    issuerLogo: "IBM",
+    date: "Dec 2025",
+    credentialId: "D7LX351DYG7H",
+    url: "https://coursera.org/verify/D7LX351DYG7H",
+    image: "/attached_assets/image_1767878630053.png"
+  },
+  {
+    id: "ibm-sql-r",
+    title: "SQL for Data Science with R",
+    issuer: "IBM via Coursera",
+    issuerLogo: "IBM",
+    date: "Dec 2025",
+    credentialId: "T5TMLQX4M1N3",
+    url: "https://coursera.org/verify/T5TMLQX4M1N3",
+    image: "/attached_assets/image_1767878686313.png"
   },
   {
     id: "upenn-crypto",
     title: "Cryptocurrency and Blockchain: An Introduction to Digital Currencies",
-    issuer: "University of Pennsylvania",
+    issuer: "University of Pennsylvania (Wharton)",
     issuerLogo: "UPenn",
-    date: "2023",
-    credentialId: "UPENN-CB-2023-XXX"
+    date: "Dec 2025",
+    credentialId: "LS18ZTFQE3CP",
+    url: "https://coursera.org/verify/LS18ZTFQE3CP",
+    image: "/attached_assets/image_1767878820049.png"
   },
   {
-    id: "sds-r",
-    title: "R Programming A-Z",
-    issuer: "SuperDataScience",
+    id: "udemy-r",
+    title: "R Programming A-Z: R For Data Science With Real Exercises",
+    issuer: "Udemy (SuperDataScience)",
     issuerLogo: "SDS",
-    date: "2022",
-    credentialId: "SDS-R-2022-XXX"
+    date: "Apr 2025",
+    credentialId: "UC-406545ad-0cd6-4d16-9cf2-4d3dec4c58ab",
+    url: "https://ude.my/UC-406545ad-0cd6-4d16-9cf2-4d3dec4c58ab",
+    image: "/attached_assets/image_1767878486263.png"
   }
 ];
 

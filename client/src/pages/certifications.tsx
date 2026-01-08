@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Award, ExternalLink, Calendar } from "lucide-react";
+import { Award, ExternalLink, Calendar, Eye } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { SectionHeader } from "@/components/ui/section-header";
 import { GlassCard } from "@/components/ui/glass-card";
 import { certifications } from "@/data/profile";
@@ -18,6 +21,8 @@ const issuerTextColors: Record<string, string> = {
 };
 
 export default function Certifications() {
+  const [selectedCert, setSelectedCert] = useState<typeof certifications[0] | null>(null);
+
   return (
     <div className="min-h-screen py-20">
       <section className="py-12 md:py-20">
@@ -70,23 +75,74 @@ export default function Certifications() {
                     )}
                   </div>
 
-                  {cert.url && (
-                    <a
-                      href={cert.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-sm text-cyan-500 hover:text-cyan-400 transition-colors mt-3"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      View Credential
-                    </a>
-                  )}
+                  <div className="flex items-center gap-2 mt-3 flex-wrap">
+                    {cert.image && (
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="gap-1"
+                        onClick={() => setSelectedCert(cert)}
+                        data-testid={`button-view-cert-${cert.id}`}
+                      >
+                        <Eye className="w-4 h-4" />
+                        View Certificate
+                      </Button>
+                    )}
+                    {cert.url && (
+                      <a
+                        href={cert.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-sm text-cyan-500 hover:text-cyan-400 transition-colors"
+                        data-testid={`link-verify-cert-${cert.id}`}
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Verify
+                      </a>
+                    )}
+                  </div>
                 </div>
               </GlassCard>
             ))}
           </div>
         </div>
       </section>
+
+      <Dialog open={!!selectedCert} onOpenChange={() => setSelectedCert(null)}>
+        <DialogContent className="max-w-4xl w-full p-2 sm:p-4">
+          <DialogTitle className="sr-only">
+            {selectedCert?.title || "Certificate"}
+          </DialogTitle>
+          {selectedCert?.image && (
+            <div className="relative">
+              <img
+                src={selectedCert.image}
+                alt={selectedCert.title}
+                className="w-full h-auto rounded-lg"
+                data-testid="img-certificate-preview"
+              />
+              <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <h3 className="font-semibold text-lg">{selectedCert.title}</h3>
+                  <p className="text-sm text-muted-foreground">{selectedCert.issuer}</p>
+                </div>
+                {selectedCert.url && (
+                  <a
+                    href={selectedCert.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button size="sm" className="gap-2">
+                      <ExternalLink className="w-4 h-4" />
+                      Verify on Coursera
+                    </Button>
+                  </a>
+                )}
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
 
       <section className="py-20 bg-card/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -138,9 +194,9 @@ export default function Certifications() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12">
             {[
               { title: "Machine Learning", count: 2, color: "from-cyan-500/20 to-cyan-600/20" },
-              { title: "Deep Learning", count: 2, color: "from-blue-500/20 to-blue-600/20" },
+              { title: "Deep Learning", count: 3, color: "from-blue-500/20 to-blue-600/20" },
               { title: "Blockchain", count: 1, color: "from-purple-500/20 to-purple-600/20" },
-              { title: "Programming", count: 1, color: "from-green-500/20 to-green-600/20" },
+              { title: "Programming", count: 2, color: "from-green-500/20 to-green-600/20" },
             ].map((area, index) => (
               <motion.div
                 key={area.title}
