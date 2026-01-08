@@ -33,7 +33,7 @@ export function Footer() {
                   <Cpu className="w-5 h-5 text-white" />
                 </div>
                 <span className="font-semibold text-lg tracking-tight">
-                  TekMonger
+                  Kelvin Kgarudi
                 </span>
               </motion.div>
             </Link>

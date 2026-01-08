@@ -38,7 +38,7 @@ export function Navbar() {
                 <Cpu className="w-5 h-5 text-white" />
               </div>
               <span className="font-semibold text-lg tracking-tight" data-testid="text-brand-name">
-                TekMonger
+                Kelvin Kgarudi
               </span>
             </motion.div>
           </Link>
