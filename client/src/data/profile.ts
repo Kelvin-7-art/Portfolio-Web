@@ -49,7 +49,7 @@ export const projects: Project[] = [
     liveUrl: "https://fraud-detection-demo.streamlit.app",
     featured: true,
     metrics: ["F1 Score: 0.94", "ROC-AUC: 0.98", "Precision-Recall Optimized"],
-    image: "/Projects_Images/Credit Card Fraud.jpg"
+    image: "/Projects_Images/Credit Card Fraud.png"
   },
   {
     id: "stock-forecasting",
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     liveUrl: "https://stock-forecast-demo.streamlit.app",
     featured: true,
     metrics: ["MAPE: 3.2%", "Real-time Predictions", "Multi-asset Support"],
-    image: "/Projects_Images/AI StockCryptoForex.jpg"
+    image: "/Projects_Images/AI StockCryptoForex.png"
   },
   {
     id: "llm-chatbot",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     category: "nlp",
     githubUrl: "https://github.com/Kelvin-7-art",
     featured: true,
-    image: "/Projects_Images/AI Chatbot Web App (LLM).webp"
+    image: "/Projects_Images/AI Chatbot Web App (LLM).png"
   },
   {
     id: "face-recognition",
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     category: "cv",
     githubUrl: "https://github.com/Kelvin-7-art",
     featured: false,
-    image: "/Projects_Images/Face Recognition Attendance System.jpg"
+    image: "/Projects_Images/Face Recognition Attendance System.png"
   },
   {
     id: "emotion-detection",
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     category: "cv",
     githubUrl: "https://github.com/Kelvin-7-art",
     featured: false,
-    image: "/Projects_Images/Human Emotion Detection.jpg"
+    image: "/Projects_Images/Human Emotion Detection.png"
   },
   {
     id: "image-classifier",
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Kelvin-7-art",
     liveUrl: "https://image-classifier-demo.streamlit.app",
     featured: false,
-    image: "/Projects_Images/Machine Learning Image Classifier.webp"
+    image: "/Projects_Images/Machine Learning Image Classifier.png"
   },
   {
     id: "real-estate-predictor",
@@ -119,7 +119,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Kelvin-7-art",
     liveUrl: "https://real-estate-predictor.streamlit.app",
     featured: false,
-    image: "/Projects_Images/Real Estate Price Predictor.webp"
+    image: "/Projects_Images/Real Estate Price Predictor.png"
   },
   {
     id: "sentiment-analysis",
@@ -131,7 +131,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Kelvin-7-art",
     liveUrl: "https://sentiment-tweets-demo.streamlit.app",
     featured: false,
-    image: "/Projects_Images/Sentiment Analysis Tweets.jpg"
+    image: "/Projects_Images/Sentiment Analysis Tweets.png"
   }
 ];
 
