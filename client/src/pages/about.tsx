@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { SectionHeader } from "@/components/ui/section-header";
 import { GlassCard } from "@/components/ui/glass-card";
 import { profile, education } from "@/data/profile";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const values = [
   {
@@ -44,6 +44,11 @@ export default function About() {
                 <div className="aspect-square max-w-md mx-auto lg:mx-0 rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-500/10 via-background to-blue-600/10 border border-border/50">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <Avatar className="w-48 h-48">
+                      <AvatarImage 
+                        src="/KelvinKgarudiImage/KelvinKgarudi.png" 
+                        alt={profile.name}
+                        className="object-cover"
+                      />
                       <AvatarFallback className="text-6xl font-bold bg-gradient-to-br from-cyan-500/20 to-blue-600/20 text-cyan-500">
                         KK
                       </AvatarFallback>
