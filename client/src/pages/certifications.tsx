@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Award, ExternalLink, Calendar, Eye } from "lucide-react";
+import { Award, ExternalLink, Calendar, ZoomIn } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
@@ -35,69 +35,74 @@ export default function Certifications() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             {certifications.map((cert, index) => (
-              <GlassCard key={cert.id} delay={index * 0.1}>
+              <GlassCard key={cert.id} delay={index * 0.1} className="p-0 overflow-visible">
                 <div className="flex flex-col h-full">
-                  <div className="flex items-start gap-4 mb-4">
-                    <div
-                      className={`w-14 h-14 rounded-xl bg-gradient-to-br ${
-                        issuerColors[cert.issuerLogo] || "from-cyan-500/10 to-blue-600/10"
-                      } flex items-center justify-center shrink-0`}
+                  {cert.image && (
+                    <div 
+                      className="relative cursor-pointer group"
+                      onClick={() => setSelectedCert(cert)}
                     >
-                      <span
-                        className={`text-lg font-bold ${
-                          issuerTextColors[cert.issuerLogo] || "text-cyan-500"
-                        }`}
-                      >
-                        {cert.issuerLogo}
-                      </span>
-                    </div>
-                    <div className="flex-1">
-                      <Badge variant="secondary" className="text-xs mb-2">
-                        {cert.issuer}
-                      </Badge>
-                    </div>
-                  </div>
-
-                  <h3 className="text-lg font-semibold mb-2 flex-1" data-testid={`text-cert-${cert.id}`}>
-                    {cert.title}
-                  </h3>
-
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mt-4 pt-4 border-t border-border/50">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
-                      <span>{cert.date}</span>
-                    </div>
-                    {cert.credentialId && (
-                      <div className="flex items-center gap-1 text-xs">
-                        <Award className="w-4 h-4" />
-                        <span className="truncate max-w-24">{cert.credentialId}</span>
+                      <img
+                        src={cert.image}
+                        alt={cert.title}
+                        className="w-full h-40 object-cover object-top rounded-t-xl"
+                        data-testid={`img-cert-thumbnail-${cert.id}`}
+                      />
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity rounded-t-xl flex items-center justify-center">
+                        <ZoomIn className="w-8 h-8 text-white" />
                       </div>
-                    )}
-                  </div>
-
-                  <div className="flex items-center gap-2 mt-3 flex-wrap">
-                    {cert.image && (
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="gap-1"
-                        onClick={() => setSelectedCert(cert)}
-                        data-testid={`button-view-cert-${cert.id}`}
+                    </div>
+                  )}
+                  
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div
+                        className={`w-12 h-12 rounded-xl bg-gradient-to-br ${
+                          issuerColors[cert.issuerLogo] || "from-cyan-500/10 to-blue-600/10"
+                        } flex items-center justify-center shrink-0`}
                       >
-                        <Eye className="w-4 h-4" />
-                        View Certificate
-                      </Button>
-                    )}
+                        <span
+                          className={`text-sm font-bold ${
+                            issuerTextColors[cert.issuerLogo] || "text-cyan-500"
+                          }`}
+                        >
+                          {cert.issuerLogo}
+                        </span>
+                      </div>
+                      <div className="flex-1">
+                        <Badge variant="secondary" className="text-xs">
+                          {cert.issuer}
+                        </Badge>
+                      </div>
+                    </div>
+
+                    <h3 className="text-base font-semibold mb-2 flex-1 line-clamp-2" data-testid={`text-cert-${cert.id}`}>
+                      {cert.title}
+                    </h3>
+
+                    <div className="flex items-center gap-3 text-sm text-muted-foreground mt-3 pt-3 border-t border-border/50 flex-wrap">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="w-4 h-4" />
+                        <span>{cert.date}</span>
+                      </div>
+                      {cert.credentialId && (
+                        <div className="flex items-center gap-1 text-xs">
+                          <Award className="w-4 h-4" />
+                          <span className="truncate max-w-20">{cert.credentialId}</span>
+                        </div>
+                      )}
+                    </div>
+
                     {cert.url && (
                       <a
                         href={cert.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-sm text-cyan-500 hover:text-cyan-400 transition-colors"
+                        className="flex items-center gap-1 text-sm text-cyan-500 hover:text-cyan-400 transition-colors mt-3"
                         data-testid={`link-verify-cert-${cert.id}`}
                       >
                         <ExternalLink className="w-4 h-4" />
-                        Verify
+                        Verify Credential
                       </a>
                     )}
                   </div>
@@ -134,7 +139,7 @@ export default function Certifications() {
                   >
                     <Button size="sm" className="gap-2">
                       <ExternalLink className="w-4 h-4" />
-                      Verify on Coursera
+                      Verify Credential
                     </Button>
                   </a>
                 )}
