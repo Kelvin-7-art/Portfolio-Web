@@ -41,25 +41,26 @@ export default function Skills() {
                   <div className="space-y-3">
                     {category.skills.map((skill, skillIndex) => (
                       <motion.div
-                        key={skill}
+                        key={skill.name}
                         initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1 + skillIndex * 0.05 }}
-                        className="flex items-center justify-between group"
+                        className="flex items-center justify-between gap-3 group"
                       >
-                        <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">
-                          {skill}
+                        <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors flex-shrink-0">
+                          {skill.name}
                         </span>
-                        <div className="w-24 h-1.5 rounded-full bg-accent overflow-hidden">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            whileInView={{ width: "100%" }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 + skillIndex * 0.05, duration: 0.5 }}
-                            className="h-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-600"
-                            style={{ width: `${75 + Math.random() * 25}%` }}
-                          />
+                        <div className="flex-1 flex items-center gap-2">
+                          <div className="flex-1 h-1.5 rounded-full bg-accent overflow-hidden">
+                            <motion.div
+                              initial={{ width: 0 }}
+                              whileInView={{ width: `${skill.proficiency}%` }}
+                              viewport={{ once: true }}
+                              transition={{ delay: index * 0.1 + skillIndex * 0.05, duration: 0.5 }}
+                              className="h-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-600"
+                            />
+                          </div>
                         </div>
                       </motion.div>
                     ))}

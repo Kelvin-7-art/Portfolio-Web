@@ -126,42 +126,87 @@ export const projects: Project[] = [
   }
 ];
 
+export interface Skill {
+  name: string;
+  proficiency: number;
+}
+
 export interface SkillCategory {
   name: string;
   icon: string;
-  skills: string[];
+  skills: Skill[];
 }
 
 export const skillCategories: SkillCategory[] = [
   {
     name: "Programming",
     icon: "Code2",
-    skills: ["Python", "SQL", "R", "C++", "JavaScript"]
+    skills: [
+      { name: "Python", proficiency: 60 },
+      { name: "SQL", proficiency: 50 },
+      { name: "R", proficiency: 65 },
+      { name: "C++", proficiency: 40 },
+      { name: "JavaScript", proficiency: 20 }
+    ]
   },
   {
     name: "Machine Learning / AI",
     icon: "Brain",
-    skills: ["scikit-learn", "TensorFlow", "PyTorch", "Keras", "XGBoost", "LightGBM"]
+    skills: [
+      { name: "scikit-learn", proficiency: 79 },
+      { name: "TensorFlow", proficiency: 80 },
+      { name: "PyTorch", proficiency: 70 },
+      { name: "Keras", proficiency: 75 },
+      { name: "XGBoost", proficiency: 60 },
+      { name: "LightGBM", proficiency: 45 }
+    ]
   },
   {
     name: "Data & Analytics",
     icon: "BarChart3",
-    skills: ["Pandas", "NumPy", "Feature Engineering", "Model Evaluation", "Time Series Analysis", "Statistical Analysis"]
+    skills: [
+      { name: "Pandas", proficiency: 90 },
+      { name: "NumPy", proficiency: 85 },
+      { name: "Feature Engineering", proficiency: 80 },
+      { name: "Model Evaluation", proficiency: 80 },
+      { name: "Time Series Analysis", proficiency: 42 },
+      { name: "Statistical Analysis", proficiency: 50 }
+    ]
   },
   {
     name: "Deployment & Tools",
     icon: "Cloud",
-    skills: ["Streamlit", "Git/GitHub", "Jupyter", "Google Colab", "Docker", "FastAPI"]
+    skills: [
+      { name: "Streamlit", proficiency: 80 },
+      { name: "Git/GitHub", proficiency: 70 },
+      { name: "Jupyter", proficiency: 90 },
+      { name: "Google Colab", proficiency: 100 },
+      { name: "Docker", proficiency: 15 },
+      { name: "FastAPI", proficiency: 20 }
+    ]
   },
   {
     name: "Computer Vision",
     icon: "Eye",
-    skills: ["OpenCV", "YOLO", "CNN Architectures", "Image Processing", "Face Recognition"]
+    skills: [
+      { name: "OpenCV", proficiency: 50 },
+      { name: "YOLO", proficiency: 60 },
+      { name: "CNN Architectures", proficiency: 55 },
+      { name: "Image Processing", proficiency: 70 },
+      { name: "Face Recognition", proficiency: 65 }
+    ]
   },
   {
     name: "NLP & LLMs",
     icon: "MessageSquare",
-    skills: ["LangChain", "Transformers", "NLTK", "spaCy", "OpenAI API", "Prompt Engineering"]
+    skills: [
+      { name: "LangChain", proficiency: 45 },
+      { name: "Transformers", proficiency: 50 },
+      { name: "NLTK", proficiency: 30 },
+      { name: "spaCy", proficiency: 20 },
+      { name: "OpenAI API", proficiency: 75 },
+      { name: "Prompt Engineering", proficiency: 80 }
+    ]
   }
 ];
 
