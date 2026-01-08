@@ -34,6 +34,7 @@ export interface Project {
   liveUrl?: string;
   featured: boolean;
   metrics?: string[];
+  image?: string;
 }
 
 export const projects: Project[] = [
@@ -47,7 +48,8 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Kelvin-7-art",
     liveUrl: "https://fraud-detection-demo.streamlit.app",
     featured: true,
-    metrics: ["F1 Score: 0.94", "ROC-AUC: 0.98", "Precision-Recall Optimized"]
+    metrics: ["F1 Score: 0.94", "ROC-AUC: 0.98", "Precision-Recall Optimized"],
+    image: "/Projects_Images/Credit Card Fraud.jpg"
   },
   {
     id: "stock-forecasting",
@@ -59,7 +61,8 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/Kelvin-7-art",
     liveUrl: "https://stock-forecast-demo.streamlit.app",
     featured: true,
-    metrics: ["MAPE: 3.2%", "Real-time Predictions", "Multi-asset Support"]
+    metrics: ["MAPE: 3.2%", "Real-time Predictions", "Multi-asset Support"],
+    image: "/Projects_Images/AI StockCryptoForex.jpg"
   },
   {
     id: "llm-chatbot",
@@ -69,7 +72,8 @@ export const projects: Project[] = [
     techStack: ["Python", "LangChain", "OpenAI API", "Streamlit", "FastAPI"],
     category: "nlp",
     githubUrl: "https://github.com/Kelvin-7-art",
-    featured: true
+    featured: true,
+    image: "/Projects_Images/AI Chatbot Web App (LLM).webp"
   },
   {
     id: "face-recognition",
@@ -79,7 +83,8 @@ export const projects: Project[] = [
     techStack: ["Python", "OpenCV", "TensorFlow", "CNN", "SQLite"],
     category: "cv",
     githubUrl: "https://github.com/Kelvin-7-art",
-    featured: false
+    featured: false,
+    image: "/Projects_Images/Face Recognition Attendance System.jpg"
   },
   {
     id: "emotion-detection",
@@ -89,7 +94,8 @@ export const projects: Project[] = [
     techStack: ["Python", "YOLO", "TensorFlow", "OpenCV", "Keras"],
     category: "cv",
     githubUrl: "https://github.com/Kelvin-7-art",
-    featured: false
+    featured: false,
+    image: "/Projects_Images/Human Emotion Detection.jpg"
   },
   {
     id: "image-classifier",
@@ -100,7 +106,8 @@ export const projects: Project[] = [
     category: "ml",
     githubUrl: "https://github.com/Kelvin-7-art",
     liveUrl: "https://image-classifier-demo.streamlit.app",
-    featured: false
+    featured: false,
+    image: "/Projects_Images/Machine Learning Image Classifier.webp"
   },
   {
     id: "real-estate-predictor",
@@ -111,7 +118,8 @@ export const projects: Project[] = [
     category: "ml",
     githubUrl: "https://github.com/Kelvin-7-art",
     liveUrl: "https://real-estate-predictor.streamlit.app",
-    featured: false
+    featured: false,
+    image: "/Projects_Images/Real Estate Price Predictor.webp"
   },
   {
     id: "sentiment-analysis",
@@ -122,7 +130,8 @@ export const projects: Project[] = [
     category: "nlp",
     githubUrl: "https://github.com/Kelvin-7-art",
     liveUrl: "https://sentiment-tweets-demo.streamlit.app",
-    featured: false
+    featured: false,
+    image: "/Projects_Images/Sentiment Analysis Tweets.jpg"
   }
 ];
 

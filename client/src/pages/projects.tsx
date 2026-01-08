@@ -61,25 +61,37 @@ export default function Projects() {
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                 >
-                  <GlassCard className="h-full">
+                  <GlassCard className="h-full p-0 overflow-hidden">
                     <div className="flex flex-col h-full">
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="inline-block px-2 py-1 text-xs font-medium rounded-md bg-cyan-500/10 text-cyan-500 dark:text-cyan-400 capitalize">
-                          {project.category}
-                        </span>
-                        {project.featured && (
-                          <Badge variant="secondary" className="text-xs">
-                            Featured
-                          </Badge>
-                        )}
-                      </div>
+                      {project.image && (
+                        <div className="relative w-full h-40 overflow-hidden">
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-cover"
+                            data-testid={`img-project-${project.id}`}
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
+                        </div>
+                      )}
+                      <div className="p-6 flex flex-col flex-1">
+                        <div className="flex items-center justify-between mb-4">
+                          <span className="inline-block px-2 py-1 text-xs font-medium rounded-md bg-cyan-500/10 text-cyan-500 dark:text-cyan-400 capitalize">
+                            {project.category}
+                          </span>
+                          {project.featured && (
+                            <Badge variant="secondary" className="text-xs">
+                              Featured
+                            </Badge>
+                          )}
+                        </div>
 
-                      <h3 className="text-xl font-semibold mb-2" data-testid={`text-project-${project.id}`}>
-                        {project.title}
-                      </h3>
-                      <p className="text-muted-foreground text-sm mb-4 flex-1">
-                        {project.description}
-                      </p>
+                        <h3 className="text-xl font-semibold mb-2" data-testid={`text-project-${project.id}`}>
+                          {project.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-4 flex-1">
+                          {project.description}
+                        </p>
 
                       {project.metrics && (
                         <div className="flex flex-wrap gap-2 mb-4">
@@ -141,6 +153,7 @@ export default function Projects() {
                           Details
                           <ChevronRight className="w-4 h-4" />
                         </Button>
+                      </div>
                       </div>
                     </div>
                   </GlassCard>
