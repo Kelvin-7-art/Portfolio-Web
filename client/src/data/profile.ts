@@ -327,18 +327,18 @@ export const education: Education[] = [
   {
     id: "honours",
     degree: "Honours in Data Science",
-    institution: "North-West University",
+    institution: "Eduvos",
     location: "Potchefstroom, South Africa",
-    period: "2024 - Present",
+    period: "2026 - Present",
     description: "Specializing in Machine Learning, AI Applications, and Advanced Statistical Methods. Focus on fraud detection, time-series forecasting, and computer vision applications.",
     current: true
   },
   {
     id: "bachelors",
-    degree: "Bachelor of Science in Computer Science",
-    institution: "North-West University",
+    degree: "Bachelor of Science in Data Science",
+    institution: "Eduvos",
     location: "Potchefstroom, South Africa",
-    period: "2021 - 2023",
+    period: "2023 - 2025",
     description: "Strong foundation in algorithms, data structures, programming, and mathematics. Developed interest in machine learning and data science.",
     current: false
   }
