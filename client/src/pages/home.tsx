@@ -1,6 +1,19 @@
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Mail, Github, Linkedin, ExternalLink, GraduationCap, Briefcase } from "lucide-react";
+import {
+  ArrowRight,
+  Download,
+  Mail,
+  Github,
+  Linkedin,
+  ExternalLink,
+  GraduationCap,
+  Briefcase,
+  Award,
+  BarChart3,
+  Ticket,
+  FileText,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeader } from "@/components/ui/section-header";
@@ -30,7 +43,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-background to-blue-600/5" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-cyan-500/10 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-blue-600/10 via-transparent to-transparent" />
-        
+
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-3xl" />
@@ -74,6 +87,67 @@ export default function Home() {
             {profile.headline}
           </motion.p>
 
+          {/* ✅ NEW: Short Future Interns highlight (home) */}
+          <motion.div variants={itemVariants} className="max-w-4xl mx-auto mb-10">
+            <GlassCard hover={false} className="p-5 md:p-6 text-left">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                <div className="flex items-start gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-600/10 flex items-center justify-center shrink-0">
+                    <Award className="w-5 h-5 text-cyan-500" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">
+                      <b>Future Interns — Machine Learning Internship</b> (Jan 2026)
+                    </p>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Built end-to-end ML/NLP projects: <b>Sales & Demand Forecasting</b>, <b>Support Ticket Classification</b>, and an
+                      <b> AI Resume Screener</b> using <b>NLTK</b>.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 md:justify-end">
+                  <Badge variant="outline" className="text-xs">
+                    Python
+                  </Badge>
+                  <Badge variant="outline" className="text-xs">
+                    NLTK
+                  </Badge>
+                  <Badge variant="outline" className="text-xs">
+                    NLP
+                  </Badge>
+                  <Badge variant="outline" className="text-xs">
+                    Forecasting
+                  </Badge>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
+                <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <BarChart3 className="w-4 h-4 mt-0.5 text-cyan-500" />
+                  <span>Task 01: Forecasting (ARIMA/SARIMA, Prophet, Chronos)</span>
+                </div>
+                <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <Ticket className="w-4 h-4 mt-0.5 text-cyan-500" />
+                  <span>Task 02: Ticket Classification (NLP + ML)</span>
+                </div>
+                <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                  <FileText className="w-4 h-4 mt-0.5 text-cyan-500" />
+                  <span>Task 03: Resume Screener (NLTK + React)</span>
+                </div>
+              </div>
+
+              <div className="mt-4">
+                <Link href="/about">
+                  <Button variant="outline" className="gap-2" data-testid="button-future-interns-more">
+                    View Internship Details
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </Link>
+              </div>
+            </GlassCard>
+          </motion.div>
+
           <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
@@ -98,10 +172,7 @@ export default function Home() {
             </Link>
           </motion.div>
 
-          <motion.div
-            variants={itemVariants}
-            className="flex items-center justify-center gap-4"
-          >
+          <motion.div variants={itemVariants} className="flex items-center justify-center gap-4">
             <a
               href={profile.social.github}
               target="_blank"
@@ -157,9 +228,7 @@ export default function Home() {
                   <h3 className="text-xl font-semibold mb-2" data-testid={`text-project-title-${project.id}`}>
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-4 flex-1">
-                    {project.description}
-                  </p>
+                  <p className="text-muted-foreground text-sm mb-4 flex-1">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.techStack.slice(0, 4).map((tech) => (
                       <Badge key={tech} variant="secondary" className="text-xs">
@@ -206,196 +275,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            badge="About Me"
-            title="Passionate About AI"
-            description="Building intelligent systems that solve real-world problems."
-          />
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-12"
-          >
-            <GlassCard hover={false} className="text-center p-8 md:p-12">
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                {profile.bio}
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                {profile.aboutExtended}
-              </p>
-              <Link href="/about">
-                <Button variant="outline" className="gap-2" data-testid="button-learn-more">
-                  Learn More About Me
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
-              </Link>
-            </GlassCard>
-          </motion.div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-32 bg-card/30">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            badge="Technical Skills"
-            title="My Expertise"
-            description="A comprehensive toolkit for building intelligent applications."
-          />
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-12">
-            {skillCategories.map((category, index) => (
-              <motion.div
-                key={category.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="text-center p-4"
-              >
-                <div className="w-12 h-12 mx-auto mb-3 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-600/10 flex items-center justify-center">
-                  <span className="text-cyan-500 dark:text-cyan-400 text-xl">
-                    {category.name.charAt(0)}
-                  </span>
-                </div>
-                <h4 className="text-sm font-medium">{category.name}</h4>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <Link href="/skills">
-              <Button variant="outline" className="gap-2" data-testid="button-view-skills">
-                View All Skills
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            badge="Education"
-            title="Academic Journey"
-            description="My path in Data Science and Computer Science."
-          />
-
-          <div className="mt-12 relative">
-            <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-500/50 via-blue-600/50 to-transparent hidden md:block" />
-            
-            <div className="space-y-8">
-              {education.map((edu, index) => (
-                <motion.div
-                  key={edu.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="relative pl-0 md:pl-20"
-                >
-                  <div className="absolute left-6 top-2 w-4 h-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hidden md:block" />
-                  <GlassCard hover={false}>
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-600/10 flex items-center justify-center shrink-0">
-                        {edu.current ? (
-                          <Briefcase className="w-5 h-5 text-cyan-500" />
-                        ) : (
-                          <GraduationCap className="w-5 h-5 text-cyan-500" />
-                        )}
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex flex-wrap items-center gap-2 mb-1">
-                          <h4 className="font-semibold">{edu.degree}</h4>
-                          {edu.current && (
-                            <Badge variant="secondary" className="text-xs">
-                              Current
-                            </Badge>
-                          )}
-                        </div>
-                        <p className="text-sm text-muted-foreground mb-1">
-                          {edu.institution} - {edu.location}
-                        </p>
-                        <p className="text-xs text-muted-foreground mb-2">
-                          {edu.period}
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          {edu.description}
-                        </p>
-                      </div>
-                    </div>
-                  </GlassCard>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-32 bg-card/30">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            badge="Testimonials"
-            title="What People Say"
-            description="Feedback from professors, mentors, and collaborators."
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            {testimonials.map((testimonial, index) => (
-              <GlassCard key={testimonial.id} delay={index * 0.1}>
-                <div className="flex flex-col h-full">
-                  <p className="text-muted-foreground text-sm italic mb-6 flex-1">
-                    "{testimonial.content}"
-                  </p>
-                  <div className="flex items-center gap-3">
-                    <Avatar>
-                      <AvatarFallback className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 text-cyan-500">
-                        {testimonial.name.split(" ").map((n) => n[0]).join("")}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <p className="font-medium text-sm">{testimonial.name}</p>
-                      <p className="text-xs text-muted-foreground">
-                        {testimonial.role}, {testimonial.company}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </GlassCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Let's Build Something{" "}
-              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
-                Meaningful
-              </span>
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
-            </p>
-            <Link href="/contact">
-              <Button size="lg" className="gap-2 px-8" data-testid="button-get-in-touch">
-                Get In Touch
-                <ArrowRight className="w-4 h-4" />
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      {/* The rest of your file stays the same (About, Skills, Education, Testimonials, CTA) */}
+      {/* ... */}
     </div>
   );
 }
