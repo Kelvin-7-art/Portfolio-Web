@@ -1,0 +1,101 @@
+Build a modern, multi-page personal portfolio website for:
+
+Name: Kelvin Khotso Kgarudi (Kelvin Kgarudi)
+Location: Potchefstroom, North-West, South Africa
+Role/Headline: Machine Learning & Data Science Honours Student | AI Applications | Fraud Detection • Time Series Forecasting • Computer Vision
+Email: kgotsokgarudi@gmail.com
+Phone: +27 79 523 8702
+LinkedIn: https://www.linkedin.com/in/kelvin-k-641837291/
+GitHub: https://github.com/Kelvin-7-art
+YouTube: TekMonger (2019)
+Brand/Theme: “TekMonger / TekCorp” vibe (clean, high-tech, minimal, premium)
+
+Primary focus areas:
+- Machine Learning / AI Engineering
+- Fraud Detection (FinTech)
+- Forecasting (Stocks/Crypto/Forex)
+- Computer Vision (Face Recognition, Emotion Detection)
+- NLP + LLM apps (LangChain, OpenAI / open-source LLMs)
+- Streamlit deployment
+
+REQUIREMENTS
+1) Tech stack (modern, easy to run locally):
+- Use Next.js (App Router) + TypeScript
+- Tailwind CSS for styling
+- Framer Motion for smooth animations
+- Lucide-react icons
+- No database required
+- Content driven by a single data file (e.g., src/data/profile.ts) so I can edit everything quickly
+
+2) Multi-page site structure (must be real routes/pages):
+- Home (/)
+- About (/about)
+- Projects (/projects)
+- Skills (/skills)
+- Certifications (/certifications)
+- Contact (/contact)
+
+3) Design requirements:
+- Modern dark theme by default with a light-mode toggle
+- Hero section with strong headline + short bio + call-to-action buttons (View Projects, Download CV, Contact)
+- Clean layout, good spacing, responsive (mobile-first)
+- Subtle gradient background + glassmorphism cards + soft shadows
+- Smooth page transitions and section animations
+- Include a sticky navbar with active route highlight
+- Footer with social links + quick navigation
+
+4) Content to include (use placeholders where needed, but structure everything properly):
+ABOUT:
+- Honours student in Data Science; building end-to-end ML apps: preprocessing → feature engineering → training → evaluation → deployment
+- Interests: AI in finance, fraud detection, intelligent systems, Christian mentorship, tech innovation
+
+PROJECTS (cards with: title, short description, tech stack tags, links, and a “case study” modal or page):
+- Credit Card Fraud Detection System (group project): Logistic Regression, Random Forest, Gradient Boosting, SVM, Neural Networks; metrics (F1, ROC-AUC, PR); deployed Streamlit dashboard
+- AI Stock/Crypto/Forex Forecasting App: Prophet, ARIMA, LSTM, GRU; volatility alerts; technical indicators; Streamlit
+- AI Chatbot Web App (LLM): LangChain; OpenAI/open-source LLMs
+- Face Recognition Attendance System: OpenCV/face embeddings/CNN
+- Human Emotion Detection: YOLO + TensorFlow
+- Machine Learning Image Classifier: Streamlit app + GitHub
+- Real Estate Price Predictor: Streamlit app + GitHub
+- Sentiment Analysis Tweets Web App: NLP + Streamlit app
+Include external links fields (GitHub + live app) and show “Live Demo” only if a link exists.
+
+SKILLS:
+- Group skills into categories: Programming, ML/AI, Data, Deployment, Tools
+- Include: Python, SQL, R, C++, scikit-learn, TensorFlow, PyTorch, Pandas, NumPy, Streamlit, Git/GitHub, Jupyter/Colab, feature engineering, model evaluation, time-series, CV, NLP
+
+CERTIFICATIONS:
+- IBM Machine Learning Specialization
+- IBM Deep Learning with PyTorch, Keras & TensorFlow Specialization
+- Deep Learning with Keras & TensorFlow (IBM)
+- Introduction to Neural Networks and PyTorch (IBM)
+- Cryptocurrency and Blockchain: An Introduction to Digital Currencies (UPenn)
+- R Programming A-Z (SuperDataScience)
+(Include credential ID fields and issue dates if available; otherwise leave as placeholders)
+
+CONTACT:
+- A contact form (client-side) with validation (name, email, message)
+- “Copy email” button
+- Social links section
+- Optional: integrate EmailJS but make it optional + documented (do not require secret keys to run)
+
+5) Downloadable + easy local run (very important):
+- Provide clear README with steps for Windows:
+  - npm install
+  - npm run dev
+  - npm run build
+  - npm start
+- Ensure it runs on a standard laptop (Ryzen 7, 16GB RAM) with no extra services.
+- Include package.json scripts and ensure no missing imports.
+
+6) Extras (must include):
+- SEO: page titles, meta descriptions, OpenGraph tags
+- A “Resume/CV” download button that points to /public/Kelvin_Kgarudi_CV.pdf (use placeholder file)
+- A “Featured Projects” section on Home (top 3)
+- A timeline section (education timeline)
+- A testimonials section (use placeholder quotes)
+- A blog/news section (optional, can be static)
+
+DELIVERABLE
+Generate the complete Next.js project with all pages, components, Tailwind config, data file, and README.
+Make sure the site looks premium and is not a basic template.

@@ -1,0 +1,146 @@
+Act as a senior UI/UX designer and visual product designer.
+
+Design a modern, premium, multi-page personal portfolio website for a Machine Learning & Data Science professional.
+
+PERSONA
+Name: Kelvin Kgarudi  
+Identity: Machine Learning & Data Science Honours Student  
+Specialties: AI Applications, Fraud Detection, Time-Series Forecasting, Computer Vision, NLP, LLMs  
+Brand vibe: Calm intelligence, precision, depth, discipline, ethical tech, subtle confidence  
+Audience: Recruiters, ML engineers, data science managers, fintech companies, academic supervisors
+
+OVERALL VISUAL STYLE
+- Modern, high-tech, minimal, professional
+- Not flashy, not playful — intelligent and serious
+- Inspired by: Apple Developer, Vercel, OpenAI, NVIDIA, Stripe
+- Feel: “Quiet confidence + deep technical competence”
+- Dark mode default, light mode optional
+
+COLOR SYSTEM
+Primary:
+- Deep charcoal / near-black background (#0B0F14 or similar)
+- Soft off-white text (#EAEAEA)
+- Cool blue / cyan accent (AI/tech feel)
+Secondary accents:
+- Muted purple or teal for highlights
+- Subtle gradients (very soft, no harsh contrast)
+Rules:
+- Avoid bright neon
+- Avoid red unless for alerts
+- Use gradients sparingly and tastefully
+
+TYPOGRAPHY
+- Headings: Modern sans-serif (Inter, Geist, or SF Pro–style)
+- Body text: Clean, readable, neutral
+- Code / tech labels: Monospace (JetBrains Mono or Fira Code)
+Rules:
+- Clear hierarchy
+- Generous line spacing
+- No decorative fonts
+
+LAYOUT PRINCIPLES
+- Strong spacing and whitespace
+- Grid-based alignment
+- Cards with soft shadows or glassmorphism
+- Rounded corners (subtle, not playful)
+- Consistent section rhythm across pages
+
+ANIMATION & INTERACTIONS
+- Smooth fade + slide animations on load
+- Micro-interactions on hover (cards lift slightly)
+- Page transitions should feel fluid and calm
+- Avoid heavy motion or gimmicks
+- Use animation to guide attention, not distract
+
+PAGE-BY-PAGE DESIGN
+
+HOME PAGE
+Hero section:
+- Big headline stating role & focus
+- Short subheading with specializations
+- Two primary buttons:
+  - “View Projects”
+  - “Download CV”
+- Minimal background gradient or abstract tech pattern
+
+Below hero:
+- Featured Projects (3 cards)
+- Short About preview
+- Tech stack badges/logos
+- Education timeline snippet
+
+ABOUT PAGE
+- Professional portrait placeholder
+- Story-driven layout (not long text blocks)
+- Emphasize:
+  - End-to-end ML thinking
+  - Applied AI mindset
+  - Ethics, discipline, Christian mentorship values (subtle)
+- Timeline-style education section
+
+PROJECTS PAGE
+- Grid of project cards
+- Each card includes:
+  - Project title
+  - One-line value statement
+  - Tech stack chips
+  - “View Details” / “Live Demo” buttons
+- Category filters:
+  - ML
+  - Fraud Detection
+  - Forecasting
+  - Computer Vision
+  - NLP / LLM
+- Case-study layout for project details
+
+SKILLS PAGE
+- Skill categories:
+  - Programming
+  - Machine Learning
+  - Data & Analytics
+  - Deployment & Tools
+- Use:
+  - Icons
+  - Progress indicators (subtle, not gamified)
+  - Clean grouping
+- Avoid skill bars that feel “junior”
+
+CERTIFICATIONS PAGE
+- Certificate cards
+- Issuer logo
+- Title, issuer, date
+- Minimal, academic feel
+
+CONTACT PAGE
+- Clean, distraction-free layout
+- Simple contact form
+- Email copy button
+- Social links
+- Calm call-to-action: “Let’s build something meaningful”
+
+NAVIGATION & FOOTER
+- Sticky top navigation
+- Active page indicator
+- Minimal footer with:
+  - Name
+  - Role
+  - Social links
+  - Copyright
+
+ACCESSIBILITY
+- High contrast for readability
+- Large enough font sizes
+- Clear focus states
+- Keyboard navigation friendly
+
+FINAL DESIGN GOAL
+The site should feel like:
+“This person is disciplined, intelligent, technically deep, and ready for serious ML work.”
+
+Avoid:
+- Portfolio clichés
+- Overly playful UI
+- Startup hype language
+- Excessive animations
+
+Deliver high-fidelity design concepts, layout structure, and styling direction — not code.
