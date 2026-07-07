@@ -133,45 +133,10 @@ export default function About() {
             description="Combining academic teaching with hands-on machine learning development."
           />
 
-          {/* Experience Timeline */}
+          {/* Experience Timeline - Most Recent First */}
           <div className="mt-12 space-y-8">
-            {/* Future Interns - Machine Learning Intern */}
+            {/* Mathematics Tutor - Eduvos (MOST RECENT) */}
             <GlassCard delay={0}>
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-600/10 flex items-center justify-center shrink-0">
-                    <Brain className="w-5 h-5 text-cyan-500" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-lg">Machine Learning Intern</h3>
-                    <p className="text-sm text-muted-foreground mb-1">
-                      Future Interns · Internship
-                    </p>
-                    <p className="text-xs text-muted-foreground mb-3">
-                      Jan 2026 - Feb 2026 · 2 mos
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Completed a hands-on ML internship delivering portfolio-ready projects across forecasting, 
-                      NLP classification, and HR-tech screening. Built end-to-end solutions with Python, NLTK, 
-                      Streamlit, and React.js.
-                    </p>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {["Python", "NLTK", "Streamlit", "React.js", "ARIMA", "Model Evaluation", "Git/GitHub"].map((t) => (
-                        <Badge key={t} variant="outline" className="text-xs">
-                          {t}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <Badge variant="secondary" className="shrink-0">
-                  Jan - Feb 2026
-                </Badge>
-              </div>
-            </GlassCard>
-
-            {/* Mathematics Tutor - Eduvos */}
-            <GlassCard delay={0.1}>
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-600/10 flex items-center justify-center shrink-0">
@@ -202,6 +167,41 @@ export default function About() {
                 </div>
                 <Badge variant="secondary" className="shrink-0">
                   May - Jun 2026
+                </Badge>
+              </div>
+            </GlassCard>
+
+            {/* Future Interns - Machine Learning Intern */}
+            <GlassCard delay={0.1}>
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-600/10 flex items-center justify-center shrink-0">
+                    <Brain className="w-5 h-5 text-cyan-500" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-lg">Machine Learning Intern</h3>
+                    <p className="text-sm text-muted-foreground mb-1">
+                      Future Interns · Internship
+                    </p>
+                    <p className="text-xs text-muted-foreground mb-3">
+                      Jan 2026 - Feb 2026 · 2 mos
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Completed a hands-on ML internship delivering portfolio-ready projects across forecasting, 
+                      NLP classification, and HR-tech screening. Built end-to-end solutions with Python, NLTK, 
+                      Streamlit, and React.js.
+                    </p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {["Python", "NLTK", "Streamlit", "React.js", "ARIMA", "Model Evaluation", "Git/GitHub"].map((t) => (
+                        <Badge key={t} variant="outline" className="text-xs">
+                          {t}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <Badge variant="secondary" className="shrink-0">
+                  Jan - Feb 2026
                 </Badge>
               </div>
             </GlassCard>
