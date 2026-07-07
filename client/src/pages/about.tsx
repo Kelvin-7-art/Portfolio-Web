@@ -12,6 +12,7 @@ import {
   Sparkles,
   BarChart3,
   Ticket,
+  Calculator,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeader } from "@/components/ui/section-header";
@@ -123,79 +124,112 @@ export default function About() {
         </div>
       </section>
 
-      {/* EXPERIENCE SECTION (Future Interns) */}
+      {/* EXPERIENCE SECTION */}
       <section className="py-20 bg-card/30">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             badge="Experience"
-            title="Future Interns — Machine Learning Internship"
-            description="A 1-month, hands-on internship focused on building end-to-end ML/NLP systems for real-world decision support."
+            title="Professional Experience"
+            description="Combining academic teaching with hands-on machine learning development."
           />
 
-          {/* Program overview card */}
-          <div className="mt-12">
+          {/* Experience Timeline */}
+          <div className="mt-12 space-y-8">
+            {/* Future Interns - Machine Learning Intern */}
             <GlassCard delay={0}>
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-600/10 flex items-center justify-center shrink-0">
-                    <Award className="w-5 h-5 text-cyan-500" />
+                    <Brain className="w-5 h-5 text-cyan-500" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold mb-1">Machine Learning Intern</h3>
-                    <p className="text-sm text-muted-foreground">
-                      Completed a <b>1-month Machine Learning internship</b> at <b>Future Interns</b> (Jan 2026),
-                      delivering portfolio-ready projects across forecasting, NLP classification, and HR-tech screening.
+                    <h3 className="font-semibold text-lg">Machine Learning Intern</h3>
+                    <p className="text-sm text-muted-foreground mb-1">
+                      Future Interns · Internship
                     </p>
-
+                    <p className="text-xs text-muted-foreground mb-3">
+                      Jan 2026 - Feb 2026 · 2 mos
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Completed a hands-on ML internship delivering portfolio-ready projects across forecasting, 
+                      NLP classification, and HR-tech screening. Built end-to-end solutions with Python, NLTK, 
+                      Streamlit, and React.js.
+                    </p>
                     <div className="mt-3 flex flex-wrap gap-2">
-                      <Badge variant="secondary" className="text-xs">
-                        Jan 2026
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        Machine Learning
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        NLP
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        Time Series Forecasting
-                      </Badge>
-                      <Badge variant="outline" className="text-xs">
-                        NLTK
-                      </Badge>
+                      {["Python", "NLTK", "Streamlit", "React.js", "ARIMA", "Model Evaluation", "Git/GitHub"].map((t) => (
+                        <Badge key={t} variant="outline" className="text-xs">
+                          {t}
+                        </Badge>
+                      ))}
                     </div>
                   </div>
                 </div>
+                <Badge variant="secondary" className="shrink-0">
+                  Jan - Feb 2026
+                </Badge>
+              </div>
+            </GlassCard>
 
-                <div className="flex flex-wrap gap-2 md:justify-end">
-                  {["Python", "NLTK", "Streamlit", "React.js", "Model Evaluation", "Git/GitHub"].map((t) => (
-                    <Badge key={t} variant="outline" className="text-xs">
-                      {t}
-                    </Badge>
-                  ))}
+            {/* Mathematics Tutor - Eduvos */}
+            <GlassCard delay={0.1}>
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-600/10 flex items-center justify-center shrink-0">
+                    <Calculator className="w-5 h-5 text-cyan-500" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-semibold text-lg">Mathematics Tutor</h3>
+                    <p className="text-sm text-muted-foreground mb-1">
+                      Eduvos · Part-time
+                    </p>
+                    <p className="text-xs text-muted-foreground mb-3">
+                      May 2026 - Jun 2026 · 2 mos
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Tutored Calculus 1 students, helping them understand foundational concepts, 
+                      problem-solving techniques, and applications in computer science and data analysis. 
+                      Developed personalized learning strategies and provided one-on-one support to improve 
+                      student performance.
+                    </p>
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {["Calculus 1", "Mathematics", "Problem Solving", "Student Support", "Academic Tutoring"].map((t) => (
+                        <Badge key={t} variant="outline" className="text-xs">
+                          {t}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
                 </div>
+                <Badge variant="secondary" className="shrink-0">
+                  May - Jun 2026
+                </Badge>
               </div>
             </GlassCard>
           </div>
 
-          {/* Tasks grid */}
-          <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {futureInternsHighlights.map((item, idx) => (
-              <GlassCard key={item.title} delay={0.1 + idx * 0.1}>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-600/10 flex items-center justify-center shrink-0">
-                    <item.icon className="w-5 h-5 text-cyan-500" />
+          {/* Future Interns - Detailed Tasks */}
+          <div className="mt-12">
+            <h3 className="text-xl font-semibold mb-6 text-center md:text-left">
+              Future Interns — Project Highlights
+            </h3>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {futureInternsHighlights.map((item, idx) => (
+                <GlassCard key={item.title} delay={0.2 + idx * 0.1}>
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/10 to-blue-600/10 flex items-center justify-center shrink-0">
+                      <item.icon className="w-5 h-5 text-cyan-500" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold mb-2 text-sm">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold mb-2">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
-                  </div>
-                </div>
-              </GlassCard>
-            ))}
+                </GlassCard>
+              ))}
+            </div>
           </div>
 
-          {/* Extra emphasis card (optional, keeps your original styling idea) */}
+          {/* Outcome / Summary */}
           <div className="mt-8">
             <GlassCard delay={0.5}>
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -204,10 +238,12 @@ export default function About() {
                     <Sparkles className="w-5 h-5 text-cyan-500" />
                   </div>
                   <div>
-                    <h3 className="font-semibold mb-1">Outcome</h3>
+                    <h3 className="font-semibold mb-1">Key Outcomes</h3>
                     <p className="text-sm text-muted-foreground">
-                      Strengthened my understanding of <b>time series forecasting</b>, <b>text classification</b>, and
-                      <b> NLP preprocessing with NLTK</b>, while building deployable applications for business and HR-tech use cases.
+                      Strengthened expertise in <b>time series forecasting</b>, <b>text classification</b>, and
+                      <b> NLP preprocessing with NLTK</b>, while building deployable applications for business 
+                      and HR-tech use cases. Complemented with <b>mathematical teaching experience</b> that 
+                      enhanced communication and analytical skills.
                     </p>
                   </div>
                 </div>
